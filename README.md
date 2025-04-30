@@ -3,7 +3,7 @@ OneFlow is a lightweight smart contract for auto-forwarding a percentage of inco
 
 # OneFlow 🌀
 **Author:** [althea89sky](https://github.com/althea89sky)  
-**License:** Proprietary – Contact for commercial use
+**License:** MIT
 
 ## Overview
 **OneFlow** is a lightweight, rate-based, single-recipient ETH and ERC-20 token distribution smart contract. It is designed for auto-forwarding a configurable percentage of funds to a designated wallet.
