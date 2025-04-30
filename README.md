@@ -1,23 +1,33 @@
 # Oneflow
 OneFlow is a lightweight smart contract for auto-forwarding a percentage of incoming native or ERC-20 tokens to a single wallet. Fully customizable rate and wallet address. Ideal for royalty payouts, fee routing, or treasury flows. Multichain-ready. 
 
-#MIT License
+# OneFlow 🌀
+**Author:** [althea89sky](https://github.com/althea89sky)  
+**License:** Proprietary – Contact for commercial use
 
-Copyright (c) 2024 althea89sky
+## Overview
+**OneFlow** is a lightweight, rate-based, single-recipient ETH and ERC-20 token distribution smart contract. It is designed for auto-forwarding a configurable percentage of funds to a designated wallet.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the “Software”), to deal
-in the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-the Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
+---
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## 🔐 Features
+- Set a single payout address (`poolWallet`)
+- Set a distribution rate (e.g., 7500 = 75%)
+- Automatically distributes native tokens (ETH, BNB, MATIC, etc.)
+- Manually distributes ERC-20 tokens
+- Owner can update wallet, rate, and withdraw remaining funds
 
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+---
+
+## 🔧 Example Usage
+
+```solidity
+// Deploy
+OneFlow oneflow = new OneFlow(poolWallet, 7500); // 75% flow rate
+
+// Update wallet
+oneflow.setPoolWallet(newWallet);
+
+// Update rate
+oneflow.setRate(5000); // 50% distribution
+
